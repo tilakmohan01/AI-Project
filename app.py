@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # --- 1. CONFIGURATION (USING SECRETS) ---
-# Pehle yahan API key direct thi, ab ye secure hai.
+
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
@@ -131,4 +131,5 @@ def main_dashboard():
 if st.session_state['logged_in']:
     main_dashboard()
 else:
+
     login_page()
